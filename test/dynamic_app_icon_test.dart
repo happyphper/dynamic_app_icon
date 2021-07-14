@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:dynamic_app_icon/dynamic_app_icon.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('dynamic_app_icon');
@@ -15,9 +14,5 @@ void main() {
 
   tearDown(() {
     channel.setMockMethodCallHandler(null);
-  });
-
-  test('getPlatformVersion', () async {
-    expect(await DynamicAppIcon.platformVersion, '42');
   });
 }
